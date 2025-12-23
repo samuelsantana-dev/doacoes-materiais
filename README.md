@@ -82,6 +82,47 @@ DonateFlow/
 
 ---
 
+## 🧹 Padronização de Código – ESLint
+
+Este projeto utiliza **ESLint** para garantir padronização de código, reduzir erros comuns e melhorar a qualidade do desenvolvimento no **frontend** e **backend**.
+
+### 🎯 Objetivos
+- Padronizar o estilo de código
+- Identificar erros em tempo de desenvolvimento
+- Facilitar manutenção e code review
+- Garantir consistência entre os membros do time
+
+### 🔧 Executando o Lint
+
+Na raiz do **frontend** ou **backend**, execute:
+
+```
+npm run lint
+```
+
+Para corrigir automaticamente problemas simples:
+
+```
+npm run lint:fix
+```
+
+### 🧪 Validação
+- Erros (```error```) devem ser corrigidos antes de qualquer commit
+- Warnings (```warning```) indicam melhorias recomendadas
+- O diretório ```dist/``` é ignorado pelo ESLint
+- O projeto utiliza TypeScript ESLint com verificação de tipos ativa
+
+### 📦 Scripts Disponíveis
+
+```
+{
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
+}
+```
+
+---
+
 ## 🤝 Contribuidores
 
 A lista completa de contribuidores pode ser encontrada em  
