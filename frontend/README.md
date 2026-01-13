@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# DonateFlow – Doações Materiais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **DonateFlow** é uma plataforma voltada à gestão completa do ciclo de vida de doações materiais — desde a oferta do item, passando pelo matching inteligente com organizações, até a logística de entrega ou coleta.
 
-Currently, two official plugins are available:
+O projeto possui foco social e voluntário, mas utiliza tecnologias e arquitetura de nível profissional, permitindo escalabilidade, manutenção e colaboração aberta.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objetivo do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Facilitar e otimizar o processo de doações materiais, conectando doadores a organizações parceiras (ONGs, abrigos e instituições sociais), garantindo que os itens doados atendam necessidades reais e reduzindo desperdícios.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Funcionalidades
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📦 Oferta de Doações
+- Cadastro detalhado de itens (roupas, móveis, eletrodomésticos, etc.)
+- Upload de fotos
+- Informações sobre o estado de conservação
+- Localização do doador
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🏢 Demanda das Organizações
+- Criação de listas de desejos por ONGs e instituições
+- Priorização de itens realmente necessários
+- Controle de demandas ativas e atendidas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🤖 Matching Inteligente
+- Sugestão automática das melhores organizações para receber a doação
+- Baseado em:
+  - Geolocalização
+  - Compatibilidade entre item doado e lista de desejos
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🚚 Logística
+- Coordenação de coleta ou entrega
+- Integração com mapas ou sistema de agendamento
+- Acompanhamento do status da doação
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧠 Arquitetura do Projeto
+
+Estrutura separada em **Frontend** e **Backend**, comunicando-se via API REST.
+
+````
+DonateFlow/
+├── frontend/
+├── backend/
+└── README.md
+````
+
+---
+
+## 🖥️ Stack Frontend
+
+- React.js
+- TypeScript
+- JavaScript
+- Material UI
+- Zod (validação de formulários)
+
+---
+
+## ⚙️ Stack Backend
+
+- Node.js
+- NestJS
+- TypeScript
+- PostgreSQL
+- (Opcional: MongoDB para dados não relacionais)
+
+---
+
+## 🧪 Boas Práticas
+
+- Tipagem forte com TypeScript
+- Validação de dados no frontend e backend
+- Estrutura modular
+- Separação clara de responsabilidades
+- Preparado para testes automatizados
+- Padronização de commits e branches
+
+---
+
+## 🤝 Contribuidores
+
+A lista completa de contribuidores pode ser encontrada em  
+[CONTRIBUTORS.md](./CONTRIBUTORS.md).
+
+---
+
+## 📌 Status do Projeto
+
+🚧 Em desenvolvimento ativo
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
